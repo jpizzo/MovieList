@@ -1,15 +1,32 @@
+h1 {
+	margin-top: 0px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+  margin-bottom: 100px;
+  text-align: left;
+	background-color: #F7F7F7;
+}
 .App {
 	font-weight: 100;
   font-family: Noteworthy, thin, sans-serif;
   margin-left: 33.33%;
   margin-right: 33.33%;
 }
-h1 {
-	padding-left: 10px;
-  text-align: left;
-	background-color: #F7F7F7;
+.ListEntry {
+	margin-left: 4px;
 }
+
 #container {
-	display: block;
-  padding-bottom: 30em;
+  padding-bottom: 8em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #EEEEEE;
+}
+
+#movie-list {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #EEEEEE;
+	margin: auto;
+	width: 90%;
 }

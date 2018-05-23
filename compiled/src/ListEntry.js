@@ -10,10 +10,6 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _ListEntry = require("./ListEntry");
-
-var _ListEntry2 = _interopRequireDefault(_ListEntry);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,35 +18,37 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var List = function (_Component) {
-	_inherits(List, _Component);
+var ListEntry = function (_Component) {
+	_inherits(ListEntry, _Component);
 
-	function List() {
-		_classCallCheck(this, List);
+	function ListEntry() {
+		_classCallCheck(this, ListEntry);
 
-		return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (ListEntry.__proto__ || Object.getPrototypeOf(ListEntry)).apply(this, arguments));
 	}
 
-	_createClass(List, [{
+	_createClass(ListEntry, [{
 		key: "render",
 		value: function render() {
-
+			console.log('movie', this.props.movie);
 			return _react2.default.createElement(
-				"div",
-				{ className: "List" },
+				"tr",
+				null,
 				_react2.default.createElement(
-					"table",
-					{ id: "movie-list" },
-					this.props.movieList.map(function (movie) {
-						return _react2.default.createElement(_ListEntry2.default, { movie: movie });
-					})
+					"div",
+					{ className: "ListEntry" },
+					_react2.default.createElement(
+						"p",
+						null,
+						this.props.movie.title
+					)
 				)
 			);
 		}
 	}]);
 
-	return List;
+	return ListEntry;
 }(_react.Component);
 
-exports.default = List;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9MaXN0LmpzIl0sIm5hbWVzIjpbIkxpc3QiLCJwcm9wcyIsIm1vdmllTGlzdCIsIm1hcCIsIm1vdmllIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7Ozs7Ozs7OztJQUVNQSxJOzs7Ozs7Ozs7OzsyQkFFRzs7QUFFTixVQUNDO0FBQUE7QUFBQSxNQUFLLFdBQVUsTUFBZjtBQUNFO0FBQUE7QUFBQSxPQUFPLElBQUcsWUFBVjtBQUNFLFVBQUtDLEtBQUwsQ0FBV0MsU0FBWCxDQUFxQkMsR0FBckIsQ0FBeUI7QUFBQSxhQUN6Qiw4QkFBQyxtQkFBRCxJQUFXLE9BQU9DLEtBQWxCLEdBRHlCO0FBQUEsTUFBekI7QUFERjtBQURGLElBREQ7QUFTRDs7OztFQWJpQkMsZ0I7O2tCQWdCSkwsSSIsImZpbGUiOiJMaXN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IExpc3RFbnRyeSBmcm9tIFwiLi9MaXN0RW50cnlcIlxuXG5jbGFzcyBMaXN0IGV4dGVuZHMgQ29tcG9uZW50e1xuXG5cdHJlbmRlcigpe1xuXG5cdCAgcmV0dXJuKFxuXHRcdCAgPGRpdiBjbGFzc05hbWU9XCJMaXN0XCI+XG5cdFx0ICAgIDx0YWJsZSBpZD1cIm1vdmllLWxpc3RcIj5cblx0XHRcdCAgICB7dGhpcy5wcm9wcy5tb3ZpZUxpc3QubWFwKG1vdmllID0+IFxuXHRcdFx0ICAgIFx0PExpc3RFbnRyeSBtb3ZpZT17bW92aWV9IC8+XG5cdFx0XHQgICAgICApfVxuXHRcdCAgICA8L3RhYmxlPlxuXHRcdCAgPC9kaXY+XG5cdCAgKVxuXHR9XG59XG5cbmV4cG9ydCBkZWZhdWx0IExpc3Q7Il19
+exports.default = ListEntry;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9MaXN0RW50cnkuanMiXSwibmFtZXMiOlsiTGlzdEVudHJ5IiwiY29uc29sZSIsImxvZyIsInByb3BzIiwibW92aWUiLCJ0aXRsZSIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTs7Ozs7Ozs7Ozs7O0lBR01BLFM7Ozs7Ozs7Ozs7OzJCQUVHO0FBQ1BDLFdBQVFDLEdBQVIsQ0FBWSxPQUFaLEVBQXFCLEtBQUtDLEtBQUwsQ0FBV0MsS0FBaEM7QUFDQyxVQUNDO0FBQUE7QUFBQTtBQUNFO0FBQUE7QUFBQSxPQUFLLFdBQVUsV0FBZjtBQUEyQjtBQUFBO0FBQUE7QUFBSSxXQUFLRCxLQUFMLENBQVdDLEtBQVgsQ0FBaUJDO0FBQXJCO0FBQTNCO0FBREYsSUFERDtBQUtEOzs7O0VBVHNCQyxnQjs7a0JBWVROLFMiLCJmaWxlIjoiTGlzdEVudHJ5LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gXCJyZWFjdFwiO1xuXG5cbmNsYXNzIExpc3RFbnRyeSBleHRlbmRzIENvbXBvbmVudHtcblxuXHRyZW5kZXIoKXtcblx0XHRjb25zb2xlLmxvZygnbW92aWUnLCB0aGlzLnByb3BzLm1vdmllKVxuXHQgIHJldHVybihcblx0XHQgIDx0cj5cblx0XHQgICAgPGRpdiBjbGFzc05hbWU9XCJMaXN0RW50cnlcIj48cD57dGhpcy5wcm9wcy5tb3ZpZS50aXRsZX08L3A+PC9kaXY+XG5cdFx0ICA8L3RyPlxuXHQgIClcblx0fVxufVxuXG5leHBvcnQgZGVmYXVsdCBMaXN0RW50cnk7Il19
